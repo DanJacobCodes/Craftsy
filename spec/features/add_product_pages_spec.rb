@@ -1,10 +1,9 @@
 require 'rails_helper'
 
-describe "the add a list process" do
+describe "the add a product process" do
   it "adds a new product" do
     visit products_path
-    click_link 'Add product'
-    fill_in 'Name', :with => 'Jacket'
+    click_link("Add product", visible: false)
     click_on 'Add'
     expect(page).to have_content 'Products'
   end
