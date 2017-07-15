@@ -8,6 +8,7 @@
    <li class="list-group-item"><%= link_to product.name, product_path(product) %></li>
    <% end %>
  </ul>
-
+ <% if current_user && current_user.admin %>
  <%= link_to "Add product", new_product_path, :class => "btn btn-success" %>
+ <% end %>
 </div>
