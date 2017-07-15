@@ -3,6 +3,7 @@ class ProductsController < ApplicationController
 
 
   def index
+  @user = current_user
   @products = Product.all
 end
 
@@ -36,6 +37,7 @@ def create
 end
 
 def update
+
   @product = Product.find(params[:id])
   if @product.update(product_params)
     flash[:notice] = "Updated successfully"
