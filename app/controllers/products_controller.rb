@@ -1,9 +1,8 @@
 class ProductsController < ApplicationController
-  before_action :only => [:new, :edit, :destroy]
+  before_action :only => [:edit, :destroy]
 
 
   def index
-  @user = current_user
   @products = Product.all
 end
 
@@ -13,6 +12,7 @@ end
 
 def show
   @product = Product.find(params[:id])
+  @review = Review.new
 end
 
 def destroy
