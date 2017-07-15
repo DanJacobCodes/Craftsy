@@ -8,7 +8,8 @@ class ReviewsController < ApplicationController
 
   def destroy
     @product = Product.find(params[:product_id])
-    @review.destroy
+    @review = Review.find(params[:id])
+    @review.destroy 
     redirect_to products_path(@product)
   end
 
