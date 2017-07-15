@@ -1,1 +1,18 @@
 <h1><%= @product.name %></h1>
+<hr>
+<h2>Description: <%= @product.description %></h2>
+<hr>
+<br>
+<h2>Price: $<%= @product.price %></h2>
+
+
+
+<div class="container">
+  <h4>Remove Product</h4>
+  <%= link_to "Delete", product_path(current_user,@product),
+  :data => {:confirm => "You sure?",
+    :method => "delete"}, :class => "btn red " %>
+
+    <h4>Edit this product</h4>
+    <%= link_to "Edit", edit_product_path(current_user,@product) %>
+</div>
