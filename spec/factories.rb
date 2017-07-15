@@ -6,7 +6,7 @@ FactoryGirl.define do
   end
 
   factory(:user) do
-    email('brian@epicodus.com')
+    email('admin@admin.com')
     password('12345')
   end
 
