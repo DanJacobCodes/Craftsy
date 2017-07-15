@@ -1,0 +1,10 @@
+<h1>Welcome to Craftsy</h1>
+<hr>
+ <ul>
+   <% @products.each do |product| %>
+   <li class="list-group-item"><%= link_to product.name, product_path(product) %></li>
+   <% end %>
+ </ul>
+
+ <%= link_to "Add product", new_product_path(@product), :class => "btn btn-success" %>
+</div>
